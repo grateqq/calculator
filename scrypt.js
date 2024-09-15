@@ -20,6 +20,7 @@ let operator
 let array = []
 
 //BTON IGUAL
+
 const botonigual = document.getElementById("igual")
 botonigual.addEventListener("click", () => { 
   console.log(array); 
