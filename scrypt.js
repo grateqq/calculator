@@ -19,6 +19,7 @@ let number2
 let operator
 let array = [] // se guarda el prenumero
 let resultado = {}
+let panatalla
 //BTON IGUAL
 
 const botonigual = document.getElementById("igual")
@@ -32,8 +33,9 @@ botonigual.addEventListener("click", () => {
   console.log(resultado)
   // ejecuto el metodo y muestro
   console.log(resultado.operation())
+  document.getElementById("resultado").textContent = resultado.operation()
   resultado = {}
-
+  
 })
 // Boron resta
 const botonmin = document.getElementById("min")
@@ -62,6 +64,7 @@ botonsum.addEventListener("click", ()=> {
   resultado.num1 = number1
   array = []
   
+  
   resultado.operation = function (num1,num2) { 
     let sum = 0
     return sum = resultado.num1  + resultado.num2
@@ -78,6 +81,9 @@ botonsum.addEventListener("click", ()=> {
 const boton1 = document.getElementById("1")
 boton1.addEventListener("click", () => { 
   array.push(1)
+  pantalla = array.join("")
+
+  document.getElementById("resultado").textContent = pantalla
 })
 //console.log(boton1) // vista de html
 
